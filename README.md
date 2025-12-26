@@ -1,8 +1,12 @@
-# DATA ENGINEERING
+# DATA ENGINEERING PROJECT
 ## Fraud Detection Pipeline for Transactionl Tabular Data
 
 This is a reproducible, Colab-friendly framework for Fraud Detection across two dataseets: Credit Card (PCA Feasures) and PaySim (transaction logs).
 It delivers tables and figures to five requestions (RQ1-RQ5), handles class imbalance, compares algorithms, designs an end-to-end pipeline, evaluate metrics that matter to rare events, uses feature engineering strategies with automatic saving of all oitputs
+
+## Dataset Links
+* https://www.kaggle.com/datasets/ealaxi/paysim1
+* https://www.kaggle.com/datasets/mlg-ulb/creditcardfraud
 
 ## Primary Features
 * Two Datasets: Credit Crad (Class) and PaySim(isFraud)
@@ -14,14 +18,14 @@ It delivers tables and figures to five requestions (RQ1-RQ5), handles class imba
 * Auto save tables (CSV/XLSX) and figures (PNG/SVG) for Research Questions
 * Colab-ready: safe memory defaults, float32, optional subsampling
 
-## Repository Structure
+## Repository/Folder Structure
 
    | Function | Output
 |----------|----------
 | creditcard.csv/   | Credit Card dataset (Kaggle PCA features) 
 | frauddetection.csv  | PaySim transactions dataset
 | Fraud Detection Pipeline for Transactionl Tabular Data.ipynb  | Colab IDE
-|  Results/ |Auto-saved figures & tables
+| Results/ |Auto-saved figures & tables
 | README.md  |This file
 
 ## Prerequisites
@@ -32,7 +36,7 @@ It delivers tables and figures to five requestions (RQ1-RQ5), handles class imba
    * IMbalnced-learn (for SMOTE, undersamplin)
    * xgboost (for XGBOOST model)
   
-## Exloring The process
+## Process of code execution
 1. Create a file on google Colab
    * Fraud Detection Pipeline for Transactionl Tabular Data.ipynb
   
@@ -48,6 +52,17 @@ It delivers tables and figures to five requestions (RQ1-RQ5), handles class imba
    * Find outputs and download necessary files to local machine
   
 ## Research Questions and OUtputs
+
+RQ1: How do different imbalance handling techniques (under sampling, SMOTE oversampling, and class weighting) affect the performance of machine learning models in detecting fraudulent transactions?
+
+RQ2: Which machine learning algorithms (Logistic Regression, Random Forest, XGBoost, Isolation Forest) demonstrate superior performance for fraud detection in highly imbalanced transactional datasets?
+
+RQ3: How can an end-to-end fraud detection pipeline be designed to systematically address data preprocessing, imbalance handling, model training, and evaluation in a reproducible and scalable manner?
+
+RQ4: Which evaluation metrics most effectively capture fraud detection performance in highly imbalanced scenarios, and how do they provide different insights compared to traditional accuracy measures?
+
+RQ5: What preprocessing and feature engineering strategies most significantly improve fraud detection performance across different algorithms and datasets?
+
 #### RQ1: Imbalance Handling vs Performance
 Compares: Baseline, ClassWeight, Undersample, SMOTE (Logistic Regression base)
 Metrics: PR‑AUC, MCC, F1, ROC‑AUC, Recall@1%.
@@ -63,7 +78,9 @@ Saved:
 
 #### RQ3: End‑to‑End Pipeline Design
 Table of Ingestion Stages: Ingestion → Cleaning → FE → Imbalance Handling → Training → Evaluation → Persistence
+
 Schmatic Block Diagram
+
 ![image](https://github.com/Freddyx94/DE-Fraud-Detection-Pipeline-for-Transactional-Tabular-Data/blob/main/RQ3_pipeline_schematic.png)
 Saved:
 * RQ3_pipeline_design.csv/.xlsx

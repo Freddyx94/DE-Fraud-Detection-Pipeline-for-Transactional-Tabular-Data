@@ -100,3 +100,16 @@ Saved:
 * RQ5_fe_strategies_PR_AUC_MCC.png/.svg
 
 ## Airflow DAG
+This Project utilizes Apache Airflow to deonstrate the end-to-end Machine Learning pipeline for Fraid Detection. The DAG (`fraud_detection_pipeline_complete`) manages the workflow from raw data ingestion to model evaluation, ensuring reproducibility and modularity.
+
+### Pipeline Architecture
+The Pipeline is designed as a linear sequence of isolated tasks, ensuring that data dependencies are met before model training begins
+
+### How to Run
+1.
+`export AIRFLOW_HOME=~/airflow_home
+airflow scheduler
+airflow webserver --port 8081`
+
+2.
+Access the UI: Navigate to http://localhost:8081, toggle the `fraud_detection_pipeline_complete` DAG to ON, and click the "Trigger" (Play) button.

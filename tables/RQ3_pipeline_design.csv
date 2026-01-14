@@ -1,8 +1,0 @@
-Stage,Purpose
-Data Ingestion,Load CSV; schema check; dtype coercion
-Cleaning,Deduplicate; handle missing; drop IDs
-Feature Engineering,"Cyclic time, ratios, logs"
-Imbalance Handling,SMOTE/UnderSample on training only
-Model Training,Fit LR/RF/XGB; tune thresholds
-Evaluation,"ROC-AUC, PR-AUC, F1, MCC"
-Persistence,Save metrics & figures

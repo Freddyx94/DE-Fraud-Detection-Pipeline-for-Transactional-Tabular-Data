@@ -1,0 +1,5 @@
+algorithm,C,penalty,solver,random_state,max_depth,max_samples,min_samples_leaf,n_estimators,learning_rate,scale_pos_weight,contamination
+LogReg,1.0,l2,saga,42,,,,,,,
+RandomForest,,,,42,,,2.0,200.0,,,
+XGBoost,,,,42,6.0,,,300.0,0.08,,
+IsolationForest,,,,42,,auto,,300.0,,,auto
